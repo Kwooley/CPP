@@ -22,24 +22,22 @@ int	main()
 	cout << "Enter your input (the end of range)\n";
 	cin >> end;
 	
-	while(1) {
-		sum += i;
-		if ( sum < end)
-			cout << setw(5) << i ;
-		else
-			break;
-		i++;
+	while ( end != -1) {
+		while(1) {
+			sum += i;
+			if ( sum < end)
+				cout << setw(5) << i ;
+			else
+				break;
+			i++;
+		}
+		sum -= i;
+		cout << endl;
+		cout << "Enter your input (the end of range)\n";
+		cin >> end;
 	}
-	sum -= i;
-	cout << endl;
 
 	cout << "The summation of from 0 to " << i-1 << " is " << sum << endl;
 	cout << setw(5) << sum ;
 	cout << " is less than " << setw(5) << end << endl;
 }
-
-
-
-
-
-
