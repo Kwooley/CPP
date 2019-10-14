@@ -24,3 +24,20 @@ int     main()
         else
 		cout << "Two lines are not overlapped\n";
 }
+
+bool	inputvalidate(int x1, int x2)
+{
+	if ( x1 < x2)
+		return true;
+	else
+		return false;
+}
+bool	overlap(int x1, int x2, int x3, int x4)
+{
+	int 	flag=1;
+	if ( x2 <= x3 )
+		flag =0;
+	else if ( x4 <= x1 )
+		flag = 0;
+	return flag;
+}

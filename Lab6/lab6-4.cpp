@@ -23,3 +23,22 @@ int	main()
 
 	} while ( N != -1 ) ;
 }
+int	getsum(int N)
+{
+	int 	i;
+	int	max, min, num, sum;
+	for(i=0; i<N; i++)
+	{
+		cout << "Enter your " << i+1 << "th number\n";
+		cin >> num;
+		sum += num;
+		if ( i == 0 ) 
+			min = max = num;
+		if ( min > num )
+			min = num;
+		if ( max < num)
+			max = num;
+	}
+	sum = sum - min - max;
+	return sum;
+}
