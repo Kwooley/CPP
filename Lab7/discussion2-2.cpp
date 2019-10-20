@@ -1,3 +1,5 @@
+// Array initialization
+
 #include	<iostream>
 using namespace 	std;
 

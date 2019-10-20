@@ -2,6 +2,7 @@
 #include	<fstream>
 using namespace std;
 
+
 int	main()
 {
 	const int	SIZE=10;

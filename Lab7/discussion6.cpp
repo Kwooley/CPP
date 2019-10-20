@@ -1,3 +1,5 @@
+// parallel array 
+
 #include		<iostream>
 #include		<iomanip>
 #include		<fstream>

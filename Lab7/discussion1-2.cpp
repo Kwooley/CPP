@@ -1,3 +1,5 @@
+// No bounds check
+
 #include	<iostream>
 using namespace 	std;
 
