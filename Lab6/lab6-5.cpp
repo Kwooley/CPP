@@ -23,3 +23,15 @@ int	main()
 	cout << oddSum << ": The summation of all Odd inputs\n";
 	cout << evenSum << ": The summation of all Even inputs\n";
 }
+int	evensumGet(int even)
+{
+	static int	eSum=0;
+	eSum += even;
+	return eSum;
+}
+int	oddsumGet(int odd)
+{
+	static int	oSum=0;
+	oSum += odd;
+	return oSum;
+}

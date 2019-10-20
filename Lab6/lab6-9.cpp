@@ -15,3 +15,20 @@ int	main()
 	cout << " Max, Min and Max-Min" << setw(5) << max << setw(5) << min <<setw(5) <<  max-min << endl;
 
 }
+void	getinput(int &num1, int &num2, int &num3)
+{
+	cout << "Enter your input ( 3 integers )\n";
+	cin >> num1 >> num2 >> num3;
+}
+void	maxmin(int n1, int n2, int n3, int &max, int &min) 
+{
+	min = max = n1;
+	if (min > n2)
+		min = n2;
+	if ( min > n3)
+		min = n3;
+	if ( max < n2)
+		max = n2;
+	if ( max < n3)
+		max = n3;
+}
