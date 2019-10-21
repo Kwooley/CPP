@@ -131,8 +131,7 @@ void	printoutcontents(string statename, string sex, int year, string name, int c
 }
 string 		getstatename(string str)
 {
-	int 	pos = str.find(',');
-	return 	str.substr(0,pos);
+	return 	str.substr(0,2);
 }
 string 		getgender(string str)
 {
