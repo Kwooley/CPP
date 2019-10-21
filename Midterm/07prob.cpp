@@ -106,11 +106,8 @@ void	readall(void)
 		year		= getyear(str);
 		name 		= getname(str);
 		count		= getcount(str);
-		if (year == 2018 && count > 1000 && statename == "CA") {
-			
-			printoutcontents(statename, sex, year, name, count);
-			cnt++;
-		}
+		printoutcontents(statename, sex, year, name, count);
+		cnt++;
 	}
 	cout << "Total Lines are: " << cnt << endl;
 	for(int i=0; i<100;i++)
