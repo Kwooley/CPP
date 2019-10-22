@@ -88,7 +88,7 @@ void	retrievebyState(string stname, int uyear)
 
 void	readall(void)
 {
-	fstream		ifso;
+	ifstream		ifso;
 	int			cnt, count, year;
 	string		str, statename, sex, name;
 
