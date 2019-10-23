@@ -1,54 +1,52 @@
-#include			<iostream>
-#include			<iomanip>
+#include	<iostream>
+#include	<ctime>
+#include	<cstdlib>
+#include	<iomanip>
 using	namespace	std;
 
+int		makearray(int []);
+void	makemask(int [], int last);
+void	applymask(int [], int [], int);
+void	printout(int [], int);
 
-void		findMaxSum(int [], int [][5], int, int);
-void		findMaxElm(int [], int [][5], int, int);
-void		findMaxVal(int [], int [][5], int, int);
+
+const	int		SIZE = 100;
 
 int		main()
 {
+		int		mask[SIZE];
+		int		number[SIZE];
+		int		last;
 
-		const int 	NUM_ROWS = 6; // Number of rows
-		const int 	NUM_COLS = 5; // Number of columns
-		int 		result[NUM_ROWS] = {0}; 
-		int 	numbers[NUM_ROWS][NUM_COLS] = {	{2, 7, 9, 6, 4},
-												{6, 1, 8, 10, 4},
-												{4, 3, 7, 2, 9},
-												{9, 9, 0, 3, 1},
-												{8, 8, 7, 8, 9},
-												{1, 2, 1, 2, 3}};
+		last = makearray(number);
+		printout(number, last);
+		makemask(mask, last);
+		printout(mask, last);
 
-		findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The row values are:" ;
-		for(int i=0; i<NUM_COLS; i++)
-			cout << setw(5) << result[i] ;
-		cout << endl;
-
-		findMaxElm(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The Max values in the rows are:\n" ;
-		for(int i=0; i<NUM_ROWS; i++)
-			cout << setw(5) << result[i] << endl;
-
-		findMaxVal(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The row that has the max value " ;
-		for(int i=0; i<NUM_COLS; i++)
-			cout << setw(5) << result[i] ;
-		cout << endl;
+		applymask(number, mask, last);
+		printout(number, last);
 }
-
-void		findMaxSum(int result[], int num[][5], int rows, int cols)
+int	 	makearray(int	number[])
 {
-	
+		int		last;
+		srand(time(NULL));
+		do {
+			last = rand() % 20 ;
+		} while (last < 10);
+
+		for(int i=0; i<last; i++)
+			number[i] = rand() % 100;
+		return last;
 }
-
-void		findMaxElm(int result[], int num[][5], int rows, int cols)
+void	 makemask(int	mask[], int last)
 {
-	
 }
-
-void		findMaxVal(int result[], int num[][5], int rows, int cols)
+void	applymask(int number[], int	mask[], int last)
 {
-	
+}
+void	printout(int number[], int last)
+{
+	for(int i=0;i<last; i++)
+		cout << setw(5) << number[i] ;
+	cout << endl;
 }

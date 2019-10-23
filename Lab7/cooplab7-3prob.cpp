@@ -1,66 +1,68 @@
-#include		<iostream>
-#include		<fstream>
-using namespace std;
+#include	<iostream>
+#include	<ctime>
+#include	<cstdlib>
+#include 	<cmath>
+#include	<iomanip>
+using	namespace	std;
 
-int			findcross(int [][10]);
-bool		checkup(int [][10], int, int);
-bool		checkdown(int [][10], int, int);
-bool		checkleft(int [][10], int, int);
-bool		checkright(int [][10], int, int);
-void		printout(int [][10], int);
+int		makearray(int []);
+void	printout(int [], int);
+
+void	swapfold(int [], int);
+void	sumfold(int [], int);
+void	equalfold(int [], int);
+
+
+const	int		SIZE = 100;
 
 int		main()
 {
-	int		cnt=0;
-	int		maze[10][10] = { 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-							 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
-							 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-							 0, 1, 0, 0, 1, 0, 0, 0, 0, 0,
-							 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
-							 0, 1, 0, 0, 1, 1, 1, 0, 0, 0,
-							 0, 1, 0, 0, 1, 1, 1, 0, 0, 0,
-							 0, 1, 0, 0, 1, 0, 1, 1, 0, 0,
-							 0, 1, 0, 0, 1, 1, 1, 0, 0, 0,
-							 0, 1, 0, 0, 1, 1, 1, 0, 0, 0 };
-	cnt = findcross(maze);
-	printout(maze, cnt);
-	
-}
-void	printout(int M[][10], int cnt)
-{
-	for(int i=0; i<10; i++) {
-		for(int j=0; j<10; j++) 
-				cout << setw(5) << M[i][j];
-		cout << endl;
-	}
-	cout << "Total found cross " << cnt << endl;
+		int		mask[SIZE];
+		int		number[SIZE];
+		int		last;
+
+		last = makearray(number);
+		printout(number, last);
+
+		swapfold(number, last);
+		printout(number, last);
+
+		sumfold(number, last);
+		printout(number, ceil(last/2.0));
+
+		last = makearray(number);
+		printout(number, last);
+
+		equalfold(number, last);
+		printout(number, ceil(last/2.0));
 }
 
-int		findcross(int M[][10])
+void	swapfold(int number[], int last)
 {
-	int 		cnt=0;   // the number of cross found
-
-	return cnt;
+		
+}
+void	sumfold(int number[], int last)
+{
+}
+void	equalfold(int number[], int last)
+{
 }
 
-bool	checkup(int M[][10], int i, int j) // check whether M[i+1][j] == 1
+int	 	makearray(int	number[])
 {
-	return true;
-	
-}
+		int		last;
+		srand(time(NULL));
+		do {
+			last = rand() % 20 ;
+		} while (last < 10);
 
-bool	checkdown(int M[][10], int i, int j) // check whether M[i-1][j] == 1
-{
-	return true;
-	
+		for(int i=0; i<last; i++)
+			number[i] = rand() % 10;
+		return last;
 }
-bool	checkleft(int M[][10], int i, int j) // check whether M[i][j-1] == 1
+void	printout(int number[], int last)
 {
-	return true;
-	
-}
-bool	checkright(int M[][10], int i, int j) // check whether M[i][j+1] == 1
-{
-	return true;
-	
+	for(int i=0;i<last; i++)
+		cout << setw(5) << number[i] ;
+	cout << endl;
 }
