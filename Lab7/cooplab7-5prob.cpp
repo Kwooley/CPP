@@ -1,54 +1,37 @@
-#include			<iostream>
-#include			<iomanip>
-using	namespace	std;
+// Circular N left rotation in Arrays
+// [1,2,3,4,5] and we want to make 3 left rotation => Result is [4,5,1,2,3]
+// [10,13,5,7,2] and we want to make 1 left rotation => Result is [13,5,7,2,10]
+// Do not use the additional array. In-place swapping.
 
+#include	<iostream>
+#include	<iomanip>
+using namespace std;
 
-void		findMaxSum(int [], int [][5], int, int);
-void		findMaxElm(int [], int [][5], int, int);
-void		findMaxVal(int [], int [][5], int, int);
+void	shiftleft(int	[], int, int);
+void	shiftleftone(int	[], int);
+void	printout(int	[], int);
+
 
 int		main()
 {
+	const	int	SIZE=10;
+	int		shiftcount;
+	int		number[SIZE] = {0,1,2,3,4,5,6,7,8,9};
 
-		const int 	NUM_ROWS = 6; // Number of rows
-		const int 	NUM_COLS = 5; // Number of columns
-		int 		result[NUM_ROWS] = {0}; 
-		int 	numbers[NUM_ROWS][NUM_COLS] = {	{2, 7, 9, 6, 4},
-												{6, 1, 8, 10, 4},
-												{4, 3, 7, 2, 9},
-												{9, 9, 0, 3, 1},
-												{8, 8, 7, 8, 9},
-												{1, 2, 1, 2, 3}};
+	cout << "Enter your number for circular shift left\n";
+	cin	>>	shiftcount;
 
-		findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The row values are:" ;
-		for(int i=0; i<NUM_COLS; i++)
-			cout << setw(5) << result[i] ;
-		cout << endl;
-
-		findMaxElm(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The Max values in the rows are:\n" ;
-		for(int i=0; i<NUM_ROWS; i++)
-			cout << setw(5) << result[i] << endl;
-
-		findMaxVal(result, numbers, NUM_ROWS, NUM_COLS);
-		cout << "The row that has the max value " ;
-		for(int i=0; i<NUM_COLS; i++)
-			cout << setw(5) << result[i] ;
-		cout << endl;
+	printout(number, SIZE);
+	shiftleft(number, SIZE, shiftcount);
+	printout(number, SIZE);
 }
-
-void		findMaxSum(int result[], int num[][5], int rows, int cols)
+void	shiftleft(int	number[], int SIZE, int count)
 {
-	
+
 }
-
-void		findMaxElm(int result[], int num[][5], int rows, int cols)
+void	shiftleftone(int	number[], int SIZE)
 {
-	
 }
-
-void		findMaxVal(int result[], int num[][5], int rows, int cols)
+void	printout(int	number[], int SIZE)
 {
-	
 }
