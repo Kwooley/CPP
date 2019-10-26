@@ -38,37 +38,12 @@ int 		main()
 }
 void	makevector(vector<int>	&number)
 {
-	vector<int>::iterator iter;
-	for(iter=number.begin(); iter != number.end(); iter++)
-		*iter = randnum();
-	sort(number.begin(), number.end());
 }
 void 	insertvector(vector<int> &number, int usernum)
 {
-	int 	flag=1;
-	vector<int>::iterator iter;
-
-	for(iter=number.begin(); iter !=number.end(); iter++) {
-		if ( usernum < *iter) {
-			number.insert(iter, usernum);
-			flag = 0;
-			break;
-		}
-	}
-	if(flag)
-		number.insert(number.end(), usernum);
-
 }
 void 	deletevector(vector<int>  &number, int username)
 {
-	vector<int>::iterator 	iter;
-
-	iter = find(number.begin(), number.end(), username);
-	if (iter != number.end())
-		number.erase(iter);
-	else
-		cout << "Delete item : Not found\n";
-	
 }
 int 	getinput(void)
 {
