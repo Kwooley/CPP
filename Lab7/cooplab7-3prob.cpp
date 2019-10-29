@@ -40,25 +40,15 @@ int		main()
 
 void	swapfold(int number[], int last)
 {
-		for(int i=0; i<last/2; i++) {
-			swap(number[i], number[last-i-1]);
-		}
-		// for(int i=0, j=last-1; i<j; i++, j--) {  // Works same. but use two variables.
-		// 	swap(number[i], number[j]);
-		// }
+		
 }
 void	sumfold(int number[], int last)
 {
-		for(int i=0; i<last/2; i++)
-			number[i] += number[last-i-1];
+		
 }
 void	equalfold(int number[], int equal[], int last)
 {
-		int i;
-		for(i=0; i<last/2; i++)
-			equal[i] = (number[i] == number[last-i-1])? 1 : 0 ;
-		if (last % 2 )
-			equal[i] = 0;
+		
 }
 
 int	 	makearray(int	number[])
