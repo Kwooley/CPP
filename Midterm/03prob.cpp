@@ -17,6 +17,7 @@ int 	main()
 	cout << "Min value " << min << " Max value " << max << endl;
 }
 
+//test
 int	readfile(int &min, int &max, ifstream &ifso)
 {
 	return numoflines;
