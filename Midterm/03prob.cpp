@@ -20,5 +20,6 @@ int 	main()
 //test
 int	readfile(int &min, int &max, ifstream &ifso)
 {
+	int		numoflines=0;
 	return numoflines;
 }
