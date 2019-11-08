@@ -1,13 +1,14 @@
 // Chapter 11. Structured Data.
 // 
-// Struct2.cpp
+// Programming Lab 11- 1 
+// lab11-1.cpp
 
 #include	<iostream>
 #include	<fstream>
 using namespace	std;
 
 const	int 	NUMCOURSE=2;
-struct student
+struct Student
 {
 	int	id;
 	string	name;
@@ -16,12 +17,12 @@ struct student
 	int		avg;
 };
 
-void	printout(const student &);
+void	printout(const Student &);
 
 int	main()
 {
 	ifstream	ifso;
-	student	s[100];
+	Student	s[100];
 	int		i=0, j;
 
 	ifso.open("students.txt");
@@ -38,7 +39,7 @@ int	main()
 		}
 	}
 }
-void	printout(const student &s)
+void	printout(const Student &s)
 {
 	cout << s. id << "\t" << s.name << "\t"
 		<< s.score[0] << "\t" << s.score[1] << 
