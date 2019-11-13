@@ -16,7 +16,7 @@ int	main()
 
 	for(int	i=0; i<5; i++){
 		for(int j=0;cstrarray[i][j] != '\0'; j++)
-		//for(int j=0;j<10; j++)   // Wrong. There are invalid value over the null value.
+		//for(int j=0;j<10; j++)   // Wrong. 
 			cout << cstrarray[i][j];
 		cout << endl;
 	}
