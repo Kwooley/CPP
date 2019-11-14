@@ -6,13 +6,13 @@ using	namespace	std;
 void		findMaxSum(int [], int [][5], int, int);
 void		findMaxElm(int [], int [][5], int, int);
 void		findMaxVal(int [], int [][5], int, int);
-
+const		int	SIZE=10;
 int		main()
 {
 
 		const int 	NUM_ROWS = 6; // Number of rows
 		const int 	NUM_COLS = 5; // Number of columns
-		int 		result[NUM_ROWS] = {0}; 
+		int 		result[SIZE] = {0}; 
 		int 	numbers[NUM_ROWS][NUM_COLS] = {	{2, 7, 9, 6, 4},
 												{6, 1, 8, 10, 4},
 												{4, 3, 7, 2, 9},
