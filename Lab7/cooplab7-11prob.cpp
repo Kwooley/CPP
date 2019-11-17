@@ -38,6 +38,10 @@ int 		main()
 }
 void	makevector(vector<int>	&number)
 {
+	vector<int>::iterator iter;
+	for(iter=number.begin(); iter != number.end(); iter++)
+		*iter = randnum();
+	sort(number.begin(), number.end());
 }
 void 	insertvector(vector<int> &number, int usernum)
 {
