@@ -7,7 +7,6 @@
 #include	<string>
 using  namespace	std;
 
-const	int 	MAXSIZE=1000;
 struct Namerecords {
 	string	stname;
 	string 	sex;
@@ -16,12 +15,12 @@ struct Namerecords {
 	int 	count;
 };
 
-void 	printNameRecords(Namerecords [], int);
+void 	printNameRecords(Namerecords);
 
 int		main()
 {
 	ifstream	ifso;
-	Namerecords nr[MAXSIZE];
+	Namerecords nr;
 	string 		buf, field;
 	int			i=0, fcnt=0;
 	stringstream ss;
@@ -37,36 +36,34 @@ int		main()
 		while(getline(ss, field, ',')) {
 			switch(fcnt){
 				case 0:
-						nr[i].stname = field;
+						nr.stname = field;
 						break;
 				case 1:
-						nr[i].sex = field;
+						nr.sex = field;
 						break;
 				case 2:
-						nr[i].year = stoi(field);
+						nr.year = stoi(field);
 						break;
 				case 3:
-						nr[i].name = field;
+						nr.name = field;
 						break;
 				case 4:
-						nr[i].count = stoi(field);
+						nr.count = stoi(field);
 						break;
 			}
 			fcnt = ++fcnt % 5;
 		}
 		i++;
 		ss.clear();
+		printNameRecords(nr);
 	}
 
-	printNameRecords(nr, 100);
 }
-void 		printNameRecords(Namerecords nr[], int numofRecords)
+void 		printNameRecords(Namerecords nr)
 {
-	for(int i=0; i<numofRecords; i++){
-		cout << setw(5) << nr[i].stname << "\t";
-		cout << setw(3) << nr[i].sex << "\t";
-		cout << setw(5) << nr[i].year << "\t";
-		cout << setw(10) << nr[i].name << "\t\t";
-		cout << setw(5) << nr[i].count << endl;
-	}
+		cout << setw(5) << nr.stname << "\t";
+		cout << setw(3) << nr.sex << "\t";
+		cout << setw(5) << nr.year << "\t";
+		cout << setw(10) << nr.name << "\t\t";
+		cout << setw(5) << nr.count << endl;
 }
