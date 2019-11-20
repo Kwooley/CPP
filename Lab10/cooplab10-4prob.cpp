@@ -47,7 +47,7 @@ int stringCompare(const char source[ ], const char destination[ ])
 {
 	return -1;
 }
-int stringSplit(const char source[ ], char splitlist[ ][100], char delimiter)
+int stringSplit(const char source[ ], char destination[ ][100], char delimiter)
 {
 	return 1;
 }
