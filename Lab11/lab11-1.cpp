@@ -22,19 +22,19 @@ void	printout(const Student &);
 int	main()
 {
 	ifstream	ifso;
-	Student	s[100];
+	Student	s;
 	int		i=0, j;
 
 	ifso.open("students.txt");
 	if(ifso){
-		while( ifso >> s[i].id >> s[i].name) {
-			j = 0; s[i].sum = 0;
-			while((j < NUMCOURSE) && (ifso >> s[i].score[j])){
-				s[i].sum += s[i].score[j];
+		while( ifso >> s.id >> s.name) {
+			j = 0; s.sum = 0;
+			while((j < NUMCOURSE) && (ifso >> s.score[j])){
+				s.sum += s.score[j];
 				j++;
 			}
-			s[i].avg = s[i].sum / NUMCOURSE;
-			printout(s[i]);
+			s.avg = s.sum / NUMCOURSE;
+			printout(s);
 			i++;
 		}
 	}
