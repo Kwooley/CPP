@@ -17,7 +17,7 @@ struct Student
 	int		avg;
 };
 
-void	printout(const Student &);
+void	printout(const Student);
 
 int	main()
 {
@@ -39,7 +39,7 @@ int	main()
 		}
 	}
 }
-void	printout(const Student &s)
+void	printout(const Student s)
 {
 	cout << s. id << "\t" << s.name << "\t"
 		<< s.score[0] << "\t" << s.score[1] << 
