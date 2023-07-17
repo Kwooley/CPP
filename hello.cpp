@@ -6,7 +6,8 @@ int main()
     cout << "Add a line\n";
     cout << "hello World\n";
 
-    for (int i = 0; i < 10; i++)
+    // "add comment"
+    for (int j = 0; j < 10; j++)
     {
         cout << "test\n";
         cout << "test2\n";
