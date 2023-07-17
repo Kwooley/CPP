@@ -3,5 +3,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World\n";
+    cout << "Add a line\n";
+    cout << "hello World\n";
 }
